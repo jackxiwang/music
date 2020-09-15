@@ -1,0 +1,16 @@
+.key-list {
+    width: 100%;
+    padding: .1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.key-list span {
+    margin: .2rem .1rem;
+    width: auto;
+    height: .8rem;
+    line-height: .5rem;
+    font-size: .3rem;
+    padding: .2rem;
+    border: 1px solid #9c9c9c;
+    border-radius: .4rem;
+}

@@ -1,0 +1,6 @@
+.am-carousel,.slider-frame,.slider-list,.slider-slide {
+    height: 100% !important;
+}
+.slider-slide img {
+    height: 100%;
+}

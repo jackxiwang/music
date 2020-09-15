@@ -1,0 +1,19 @@
+.index .nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    background-color: #fff;
+    font-weight: 600;
+    font-size: .3rem;
+    border-bottom: .05rem solid #ccc;
+}
+.index .nav .select {
+    color: #ff4400;
+    border-bottom: .06rem solid #ff4400;
+}
+.index .banner {
+    height: 4rem;
+}

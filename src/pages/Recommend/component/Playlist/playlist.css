@@ -1,0 +1,43 @@
+.index .playlist .play-title{
+    padding-left: .2rem;
+    width: 100%;
+    height: .8rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.playlist .play-title .line {
+    height: 100%;
+    width: .1rem;
+    background-color: #ff4400;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.playlist .play-title p {
+    height: 100%;
+    line-height: .8rem;
+    font-size: .4rem;
+    font-weight: 600;
+}
+.play-con {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.play-con .play-item {
+    width: 30%;
+    height: 3rem;
+}
+.play-con .play-item img {
+    display: block;
+    width: 100%;
+    height: 75%;
+}
+.play-con .play-item p {
+    overflow: hidden;
+    font-size: .28rem;
+
+}

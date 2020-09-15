@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import {Switch,Route,Redirect} from 'react-router-dom'
+import asyncComponent from './utils/asyncComponent'
+const Index = asyncComponent(()=>import('./pages/Index/Index'))
+const Song = asyncComponent(()=>import('./pages/Song/Song'))
+const Detail = asyncComponent(()=>import('./pages/Detail/Detail'))
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Switch>
+       <Route path='/index' component={Index}></Route>
+       <Route path='/song' component={Song}></Route>
+       <Route path='/detail' component={Detail}></Route>
+       <Redirect to="/index"></Redirect>
+     </Switch>
     </div>
   );
 }
