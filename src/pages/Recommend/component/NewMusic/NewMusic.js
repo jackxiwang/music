@@ -12,7 +12,7 @@ export default function NewMusic(props) {
             <div className="new-con">
                 {newSong.map(item => {
                     return (
-                        <Link key={item.id} className="new-con-list" to="/song">
+                        <Link key={item.id} className="new-con-list" to={"/song?id="+item.id}>
                             <div className="new-con-title">
                                 <p className="big-title">{item.name}</p>
                                 <div className="new-singer">

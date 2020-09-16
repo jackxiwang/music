@@ -8,11 +8,11 @@
     
     align-items: center;
 }
-.detail-index > span:nth-child(1) {
+.detail-index > span:nth-child(1),i {
     margin-right: .2rem;
     font-size: .4rem;
 }
-.detail-con-list:nth-child(-n+3) span{
+.detail-con-list:nth-child(-n+3) i{
     color: #ff4400;
 }
 .detail-index:nth-child(n+3) {

@@ -64,3 +64,28 @@ export const reqSearchList = (params)=>{
         params
     })
 }
+// 音乐url
+export const reqMusicUrl = (params) =>{
+    return axios({
+        url:"/song/url",
+        method:'get',
+        params
+
+    })
+}
+// 歌词/lyric
+export const reqLyric =(params)=>{
+    return axios({
+        url:'/lyric',
+        method:'get',
+        params
+    })
+}
+// 获取歌曲详情
+export const reqMusicDetail =(params)=>{
+    return axios({
+        url:'/song/detail',
+        method:'get',
+        params
+    })
+}

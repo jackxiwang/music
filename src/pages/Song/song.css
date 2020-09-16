@@ -1,0 +1,6 @@
+.song {
+    background-color:#7f7f7f ;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

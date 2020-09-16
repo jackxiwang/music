@@ -9,7 +9,7 @@ function ResultList(props) {
         <div className="result-con">
             {searchList.map((item,index) => {
                 return (
-                    <Link key={item.id} className="result-con-list" to="/list">
+                    <Link key={item.id} className="result-con-list" to={"/song?id="+item.id}>
                         <div className="result-index">
                             <span>{zero(index + 1)} </span>
                             <div className="result-con-title">

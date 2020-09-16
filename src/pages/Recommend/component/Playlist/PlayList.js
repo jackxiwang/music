@@ -3,7 +3,6 @@ import './playlist.css'
 import {Link} from 'react-router-dom'
 export default function PlayList(props) {
     const { playList } = props
-    console.log(playList);
     return (
         <div className="playlist">
             <div className="play-title">

@@ -18,7 +18,6 @@
 .cover-bgc img {
     width: 100%;
     height: 3rem;
-    filter: blur(20);
 }
 .cover-con {
     display: flex;

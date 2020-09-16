@@ -17,8 +17,8 @@ class Detail extends Component {
         return (
             <div>
                <Right></Right>
-               {list.tracks?<Cover list={list}></Cover>:null}
-               {list.tracks?<PlayDetail list={list}></PlayDetail>:null}
+               {list&&list.tracks?<Cover list={list}></Cover>:null}
+               {list&&list.tracks?<PlayDetail list={list}></PlayDetail>:null}
             </div>
         )
     }

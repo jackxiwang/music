@@ -23,6 +23,11 @@ export const changeDetailAction = (playDetail)=>{
 }
 export const reqDetailAction = (param)=>{
     return (dispatch,getState)=>{
+        // if(getState().detail.playDetail.tracks){
+        //     return
+        // }else {
+        //     dispatch(changeDetailAction({}))
+        // }
         reqDetail(param).then(res=>{
             dispatch(changeDetailAction(res.data.playlist))
         })

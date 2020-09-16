@@ -8,9 +8,9 @@ export default function HotList(props) {
         <div className="detail-con">
             {list.tracks.map((item, index) => {
                 return (
-                    <Link key={item.id} className="detail-con-list" to="/list">
+                    <Link key={item.id} className="detail-con-list" to={"/song?id="+item.id}>
                         <div className="detail-index">
-                            <span>{zero(index + 1)} </span>
+                            <i>{zero(index + 1)} </i>
 
                             <div className="detail-title">
                                 <p className="big-title">{item.name}</p>

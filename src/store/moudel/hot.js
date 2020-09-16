@@ -26,7 +26,7 @@ export const reqHotListAction = () => {
             return
         }
         reqHotList().then(res => {
-            dispatch(changeHotListAction(res.data.playlist.tracks.slice(0, 10)))
+            dispatch(changeHotListAction(res.data.playlist.tracks))
         })
     }
 }

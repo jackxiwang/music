@@ -9,7 +9,7 @@ export default function HotList(props) {
         <div className="hot-con">
             {hotList.map((item, index) => {
                 return (
-                    <Link key={item.id} className="hot-con-list" to="/detail">
+                    <Link key={item.id} className="hot-con-list" to={"/song?id="+item.id}>
                         <div className="hot-index">
                             <span>{zero(index + 1)} </span>
 

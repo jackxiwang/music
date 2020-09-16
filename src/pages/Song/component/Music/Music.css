@@ -1,0 +1,112 @@
+.music-play {
+    padding-top:1rem ;
+    height: 100%;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    font-size: .3rem;
+    display: flex;
+    flex-direction: column;
+}
+.needle,.needle-select {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    /* transform: rotate(-14deg); */
+    transform-origin:.15rem 0 ;
+    height: 2rem;
+    z-index: 300;
+}
+.needle{
+    transform: rotate(-14deg);
+}
+
+.needle-select {
+    transform: rotate(5deg);
+}
+.music-control {
+   
+    margin: 0 auto;
+    width: 3.8rem;
+    height: 3.8rem;
+    background-color: #010204;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0 0 0 20px #868686 inset;
+}
+.music-control img.role {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+}
+.play-icon,.stop-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1rem;
+    height: .9rem;
+    z-index: 2000;
+    /* background: url('../../../../assets/img/list_sprite.png') no-repeat;
+    background-position: 2px 0; */
+}
+.play-icon {
+    background: url('../../../../assets/img/list_sprite.png') no-repeat;
+    /* background-position: 2px 0; */
+    background-position: 2px -50px;
+}
+.play-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+   
+}
+
+
+
+.stop-icon {
+    background: url('../../../../assets/img/list_sprite.png') no-repeat;
+    /* background-position: 2px -50px; */
+    background-position: 2px 0;
+}
+.lysic {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+.scroll div {
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: .35rem;
+}
+.lysic .lysic-title {
+    height: 1rem;
+}
+.hide {
+    /* display: none; */
+    opacity: 0;
+}
+.ly-singer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.change{
+    color: #88c449;
+}
+.scroll {
+    padding-top: 1rem;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: block;
+    height: auto;
+    transition: all 1s;
+}

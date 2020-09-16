@@ -76,7 +76,9 @@ export const changeSearchAction = (searchList) => {
 }
 export const reqSearchAction = (params) => {
     return (dispatch, getState) => {
-
+        if(params===''){
+            return
+        }
         dispatch(changeSearchAction([]))
         reqSearchList({ keywords: params }).then(res => {
             dispatch(changeSearchAction(res.data.result.songs))

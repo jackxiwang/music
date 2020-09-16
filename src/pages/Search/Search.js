@@ -12,6 +12,7 @@ class Search extends Component {
     }
     // 输入框值改变
     changeValue(val) {
+       
         const {reditValue,value,changeIsKey,changeSearch,changeShow} = this.props
         reditValue(val)
         changeShow(true)
@@ -26,6 +27,9 @@ class Search extends Component {
     // s搜索请求
     search(){
         const {changeSearch,value,changeIsKey} = this.props
+        if(value===''){
+            return
+        }
         changeSearch(value)
         changeIsKey(false)
     }
@@ -36,10 +40,16 @@ class Search extends Component {
         changeIsKey(false)
         changeShow(false)
     }
+    showFalse(e){
+        const {changeShow} = this.props
+        if(e.target.className !== 'sub-border'){
+            changeShow(false)
+        }
+    }
     render() {
-        const {keyList,isKey,value,searchList,isShow} = this.props
+        const {keyList,isKey,value,searchList,isShow,changeShow} = this.props
         return (
-            <div className="search">
+            <div className="search" onClick={(e)=>this.showFalse(e)}>
                 <SearchIn 
                 changeValue={(value)=>this.changeValue(value)} 
                 value={value}
