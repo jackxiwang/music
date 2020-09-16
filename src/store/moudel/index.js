@@ -52,6 +52,9 @@ export const changePlayListAction = (playList)=>{
 }
 export const reqPlayListAction = ()=>{
     return (dispatch,getState)=>{
+        if(getState().index.playList.length>0){
+            return
+        }
         reqPlayList().then(res=>{
             dispatch(changePlayListAction(res.data.result))
         })
@@ -66,7 +69,9 @@ export const changeNewSongActin = (newSong)=>{
 }
 export const reqNewSongAction = ()=>{
     return (dispatch,getState)=>{
-       
+        if(getState().index.newSong.length>0){
+            return
+        }
         reqNewList().then(res=>{
             dispatch(changeNewSongActin(res.data.result))
         })

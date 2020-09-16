@@ -4,7 +4,6 @@ import zero from '../../../fiflter/zero'
 import { Link } from 'react-router-dom'
 export default function HotList(props) {
     const { hotList } = props
-    console.log(hotList);
     return (
         <div className="hot-con">
             {hotList.map((item, index) => {

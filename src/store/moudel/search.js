@@ -62,6 +62,9 @@ export const changeKeyAction = (keyList) => {
 }
 export const reqKeyAction = () => {
     return (dispatch, getState) => {
+        if(getState().search.keyList.length>0){
+            return 
+        }
         reqKeyWord().then(res => {
             dispatch(changeKeyAction(res.data.result.hots))
         })
