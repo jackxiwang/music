@@ -1,8 +1,6 @@
 export default function timePer(time){
-    if(!time){
-        return
-    }
-    let m =parseInt(time[0])
-    let s = parseInt(time[1])
+    let t = time.split(':')
+    let m =Math.floor(t[0])*60
+    let s = Math.floor(t[1])
     return m+s
 }

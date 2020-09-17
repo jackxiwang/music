@@ -3,8 +3,7 @@ import role from '../../../../assets/img/disc-ip6.png'
 import needle from '../../../../assets/img/needle-ip6.png'
 import './Music.css'
 export default function Music(props) {
-    const { playControl, play,list,detail,n } = props
-
+    const { playControl, play,list,detail,n,start,move,end } = props
     return (
         <div className="music-play">
             <img src={needle} alt="" className={play?'needle-select':'needle'} />
@@ -13,9 +12,9 @@ export default function Music(props) {
                 <div className={play?'play-icon':'stop-icon'}>
 
                 </div>
-               {detail.al? <img src={detail.al.picUrl} alt="" className="play-img"/>:null}
+               {detail.al? <img src={detail.al.picUrl} alt="" className={play?'play-img-rotate':'play-img'} />:null}
             </div>
-            <div className="lysic">
+            <div className="lysic" onTouchStart={(e)=>start(e)} onTouchMove={(e)=>move(e)} onTouchEnd={(e)=>end(e)}>
                 <div className={n>0?"hide":'lysic-title'}>
                     <div>{detail&&detail.name?detail.name:null} </div>
                     <div className="ly-singer">
