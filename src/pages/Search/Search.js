@@ -13,7 +13,7 @@ class Search extends Component {
     // 输入框值改变
     changeValue(val) {
        
-        const {reditValue,value,changeIsKey,changeSearch,changeShow} = this.props
+        const {reditValue,changeIsKey,changeSearch,changeShow} = this.props
         reditValue(val)
         changeShow(true)
         if(val){
@@ -47,7 +47,7 @@ class Search extends Component {
         }
     }
     render() {
-        const {keyList,isKey,value,searchList,isShow,changeShow} = this.props
+        const {keyList,isKey,value,searchList,isShow} = this.props
         return (
             <div className="search" onClick={(e)=>this.showFalse(e)}>
                 <SearchIn 

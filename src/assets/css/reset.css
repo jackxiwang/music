@@ -3,7 +3,7 @@
 	margin: 0;
 	box-sizing: border-box;
 	-webkit-tap-highlight-color: transparent;
-	touch-action: none;
+	/* touch-action: none; */
 	}
 	input,
 	button {

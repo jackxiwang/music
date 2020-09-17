@@ -42,6 +42,9 @@ class Song extends Component {
     }
     // 歌词滚动变色
     listUp() {
+        console.log(document.querySelector('.scroll'));
+        let scroll = document.querySelector('.scroll');
+        let itemH = scroll.querySelector('div').clientHeight
         const { lysic } = this.props
         const { n } = this.state
         let musicList = lysic.lyric ? lysic.lyric.split(/\n/) : ''
@@ -57,8 +60,13 @@ class Song extends Component {
         })===-1?n:list.findIndex(item=>{
             return time(this.refs.audio.currentTime) == item.time
         })
+       },()=>{
+           scroll.style.top =-(n*itemH)+ "px" 
        })
 
+    }
+    start(){
+        
     }
     // 离开之前
     componentWillUnmount(){
@@ -87,6 +95,7 @@ class Song extends Component {
                         list={list}
                         detail={detail}
                         n={n}
+
                     ></Music> : null
                 }
 

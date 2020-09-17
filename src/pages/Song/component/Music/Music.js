@@ -31,8 +31,8 @@ export default function Music(props) {
                     }
                     </div>
                 </div>
-                {/* 歌词 */}
-                <div className="scroll" style={{top:-(n*1.5)+ "rem"}}>
+                {/* 歌词 style={{top:-(n*1.5)+ "rem"}}*/}
+                <div className="scroll" >
                 {list.map((item,index)=>{
                     return (<div key={index} className={n===index?'change':''}>{item.con} </div>)
                 })}
